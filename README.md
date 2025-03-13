@@ -2,7 +2,7 @@
 
 A powerful, real-time chat application built from scratch using Next.js and HPKV's WebSocket pub/sub feature. This application demonstrates how to build a scalable, real-time communication system without complex backend infrastructure.
 
-![Real-Time Chat Application](https://github.com/ehsanaslani/realtime-chat/raw/main/docs/images/chat-screenshot.png)
+![Real-Time Chat Application](./chat-screenshot.png)
 
 Read the full article: [Building Your Own Powerful Real-Time Chat Application From Scratch](https://medium.com/@ehsan.aslani/building-your-own-powerful-real-time-chat-application-from-scratch-7079311d014b)
 
