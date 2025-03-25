@@ -24,6 +24,33 @@ export default {
           950: 'rgb(var(--tw-color-primary-950) / <alpha-value>)',
         },
         dark: '#222222',
+        chat: {
+          blue: {
+            light: '#e6f0ff',
+            DEFAULT: '#4285F4',
+            dark: '#1a56db'
+          },
+          green: {
+            light: '#e6f8f0',
+            DEFAULT: '#34A853',
+            dark: '#15803d'
+          },
+          red: {
+            light: '#fee2e2',
+            DEFAULT: '#EA4335',
+            dark: '#b91c1c'
+          },
+          yellow: {
+            light: '#fef9c3',
+            DEFAULT: '#FBBC05',
+            dark: '#a16207'
+          },
+          purple: {
+            light: '#f5f3ff',
+            DEFAULT: '#8a2be2',
+            dark: '#6d28d9'
+          }
+        }
       },
       keyframes: {
         flicker: {
@@ -45,10 +72,20 @@ export default {
             backgroundPosition: '700px 0',
           },
         },
+        bounce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-5px)' }
+        },
+        pulse: {
+          '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+          '50%': { opacity: '0.7', transform: 'scale(1.1)' }
+        }
       },
       animation: {
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
+        bounce: 'bounce 0.8s ease-in-out infinite',
+        pulse: 'pulse 1.5s ease-in-out infinite'
       },
     },
   },

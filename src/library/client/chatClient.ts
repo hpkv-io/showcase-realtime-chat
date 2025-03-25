@@ -6,6 +6,10 @@ export interface ChatMessage {
     message: string;
     timestamp: number;
     id?: string; // Optional ID for message identification
+    reactions?: {
+        likes: number;
+        fire: number;
+    };
 }
 
 // Define chat room structure
@@ -467,5 +471,24 @@ export class ChatClient {
     public isConnected(): boolean {
         return this.hpkvClient.isConnected();
     }
-  }
+
+    /**
+     * Update all messages in the current room
+     * @param messages - Array of messages to update
+     */
+    public async updateRoomMessages(messages: ChatMessage[]): Promise<void> {
+        if (!this.roomId) {
+            throw new Error('No room joined');
+        }
+
+        try {
+            const chatRoomKey = `chat:${this.roomId}`;
+            const messageData = JSON.stringify({ messages });
+            await this.hpkvClient.insert(chatRoomKey, messageData);
+        } catch (err) {
+            console.error('Failed to update room messages:', err);
+            throw err;
+        }
+    }
+}
   

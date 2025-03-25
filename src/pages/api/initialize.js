@@ -11,7 +11,10 @@ export default async function handler(req, res) {
     
     // Check for the 'chatrooms' registry key
     try {
-      await hpkvClient.get('chatrooms');
+      const chatroomsRegistry = await hpkvClient.get('chatrooms');
+      if (!chatroomsRegistry) {
+        await hpkvClient.insert('chatrooms', { chatrooms: [] });
+      }
     } catch (error) {
       // If the key doesn't exist, initialize it with an empty array
       if (error.message.includes('Record not found')) {

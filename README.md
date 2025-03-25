@@ -1,10 +1,9 @@
 # Real-Time Chat Application
 
-A powerful, real-time chat application built from scratch using Next.js and HPKV's WebSocket pub/sub feature. This application demonstrates how to build a scalable, real-time communication system without complex backend infrastructure.
+A powerful, real-time chat application built from scratch using [Next.js](https://nextjs.org/) and [HPKV's WebSocket pub/sub feature](https://hpkv.io/blog/2025/03/real-time-pub-sub). This application demonstrates how to build a scalable, real-time communication system without complex backend infrastructure.
 
 ![Real-Time Chat Application](./chat-screenshot.png)
 
-Read the full article: [Building Your Own Powerful Real-Time Chat Application From Scratch](https://medium.com/@ehsan.aslani/building-your-own-powerful-real-time-chat-application-from-scratch-7079311d014b)
 
 ## Features
 
@@ -14,7 +13,6 @@ Read the full article: [Building Your Own Powerful Real-Time Chat Application Fr
 - **Persistent storage**: Messages are stored in HPKV key-value storage
 - **Multiple chat rooms**: Create and join different chat rooms
 - **Message history**: Chat history is stored and loaded when joining a room
-- **Responsive design**: Works on desktop and mobile devices
 
 ## Setup and Installation
 
@@ -27,8 +25,8 @@ Read the full article: [Building Your Own Powerful Real-Time Chat Application Fr
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ehsanaslani/realtime-chat.git
-   cd hpkv-examples/apps/hpkv-live-chat
+   git clone https://github.com/hpkv-io/showcase-realtime-chat.git
+   cd showcase-realtime-chat
    ```
 
 2. Install dependencies:
@@ -38,7 +36,6 @@ Read the full article: [Building Your Own Powerful Real-Time Chat Application Fr
 
 3. Create a `.env.local` file in the project root:
    (You can find these values from [HPKV Dashboard](https://hpkv.io/dashboard))
-   The websocket base url is {{HPKV_BASE_URL}/ws}
    ```
    HPKV_API_KEY=your_api_key_here
    HPKV_BASE_URL=your_api_base_url
@@ -353,8 +350,3 @@ public async sendMessage(messageText: string): Promise<void> {
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Learn More
-
-- Read the full article: [Building Your Own Powerful Real-Time Chat Application From Scratch](https://medium.com/@ehsan.aslani/building-your-own-powerful-real-time-chat-application-from-scratch-7079311d014b)
-- Check out more examples and documentation on [HPKV's website](https://hpkv.io) 
